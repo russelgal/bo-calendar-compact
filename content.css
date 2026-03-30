@@ -1,0 +1,27 @@
+/* Подсветка при наведении в режиме скрытия */
+.bh-highlight {
+  outline: 2px dashed #e74c3c !important;
+  outline-offset: 2px !important;
+  cursor: crosshair !important;
+  position: relative;
+}
+
+.bh-highlight::after {
+  content: 'Клик — скрыть';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  z-index: 999999;
+  pointer-events: none;
+  font-family: system-ui, sans-serif;
+}
+
+/* Скрытый элемент */
+.bh-hidden {
+  display: none !important;
+}

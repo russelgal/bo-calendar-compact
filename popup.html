@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 220px;
+      padding: 12px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: #333;
+    }
+    h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+    .dot.on { background: #e74c3c; }
+    button {
+      width: 100%;
+      padding: 7px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      margin-bottom: 6px;
+      transition: background 0.15s;
+    }
+    button:hover { background: #f5f5f5; }
+    button:disabled { opacity: 0.5; cursor: default; }
+    button.primary {
+      background: #e74c3c;
+      color: #fff;
+      border-color: #e74c3c;
+    }
+    button.primary:hover { background: #c0392b; }
+    button.active {
+      background: #2ecc71;
+      border-color: #2ecc71;
+      color: #fff;
+    }
+    button.active:hover { background: #27ae60; }
+    .count {
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    .section {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+    }
+    .section-title {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    button.preset {
+      background: #fff;
+      color: #333;
+      border-color: #3498db;
+      font-size: 12px;
+      padding: 5px 0;
+    }
+    button.preset:hover { background: #ebf5fb; }
+    button.preset.on {
+      background: #3498db;
+      color: #fff;
+    }
+    button.preset.on:hover { background: #2980b9; }
+    button.update {
+      background: #e67e22;
+      color: #fff;
+      border-color: #e67e22;
+      font-size: 11px;
+      padding: 4px 0;
+    }
+    button.update:hover { background: #d35400; }
+    button.update:disabled { opacity: 0.5; }
+    .status {
+      text-align: center;
+      font-size: 10px;
+      color: #aaa;
+      margin-top: 2px;
+      min-height: 14px;
+    }
+    .status.ok { color: #27ae60; }
+    .status.err { color: #e74c3c; }
+    .status.new { color: #e67e22; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <!--<h3>Block Hider</h3>-->
+  <!-- Ручное скрытие кликом — пока отключено
+  <h3><span class="dot" id="dot"></span> Block Hider</h3>
+  <button id="toggle" class="primary">Включить</button>
+  <button id="undo">Вернуть последний</button>
+  <button id="restore">Показать все</button>
+  <div class="count">Скрыто: <span id="count">0</span></div>
+  <div class="shortcuts">
+    Включи режим, наведи на элемент, кликни чтобы скрыть.
+  </div>
+  -->
+  <div id="presets"></div>
+  <div id="update-section" class="section">
+    <div id="status" class="status"></div>
+    <button id="update" class="update">Обновить правила</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
