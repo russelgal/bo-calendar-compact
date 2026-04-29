@@ -2,10 +2,10 @@
   "broniruy-online": {
     "name": "БО Шахматка (компактный вид)",
     "selectors": [
-      "[class*=\"_categoryHeader_yn735\"] > :first-child",
-      "[class*=\"_categoryHeader_yn735\"] > :nth-child(2) > :first-child",
-      "[class*=\"_categoryRight_yn735\"] > :first-child",
-      "[class*=\"_categoryRight_yn735\"] > :nth-child(2)"
+      "[class*=\"_categoryHeader_\"] > :first-child",
+      "[class*=\"_categoryHeader_\"] > :nth-child(2) > :first-child",
+      "[class*=\"_categoryRight_\"] > :first-child",
+      "[class*=\"_categoryRight_\"] > :nth-child(2)"
     ]
   }
 }
